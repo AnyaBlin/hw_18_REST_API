@@ -15,6 +15,7 @@ import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.is;
 
 public class DemoWebShopTest {
+
     @BeforeAll
     static void setup() {
         RestAssured.baseURI = "http://demowebshop.tricentis.com/";
@@ -44,7 +45,6 @@ public class DemoWebShopTest {
             System.out.println("Response " + response.asString());
         });
     }
-
     @Tag("demowebshop")
     @Test
     void loginWithCookieTest() {
